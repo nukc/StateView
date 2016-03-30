@@ -1,10 +1,8 @@
 package com.github.nukc.sample;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import com.github.nukc.stateview.StateView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
