@@ -19,6 +19,7 @@ import androidx.core.view.NestedScrollingChild
 import androidx.core.view.NestedScrollingParent
 import androidx.core.view.ScrollingView
 import androidx.core.view.ViewCompat
+import androidx.fragment.app.FragmentContainerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 /**
@@ -297,7 +298,7 @@ class StateView @JvmOverloads constructor(
                 (viewGroup is ScrollingView && viewGroup is NestedScrollingChild) ||
                 (viewGroup is NestedScrollingParent && viewGroup is NestedScrollingChild)
             ) {
-                return if (viewGroup.parent is ViewGroup) {
+                return if (viewGroup.parent is ViewGroup && viewGroup.parent !is FragmentContainerView) {
                     wrap(viewGroup)
                 } else {
                     Injector.wrapChild(viewGroup)

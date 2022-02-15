@@ -26,7 +26,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    implementation 'com.github.nukc:StateView:v3.0.1'
+	    implementation 'com.github.nukc:StateView:v3.0.2'
 	}
 ```
 
