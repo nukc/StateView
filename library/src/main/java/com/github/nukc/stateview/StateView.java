@@ -524,7 +524,7 @@ public class StateView extends View {
     public int getActionBarHeight() {
         int height = 0;
         TypedValue tv = new TypedValue();
-        if (getContext().getTheme().resolveAttribute(R.attr.actionBarSize, tv, true)) {
+        if (getContext().getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
             height = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
         }
         return height;
