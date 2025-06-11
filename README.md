@@ -17,7 +17,7 @@ StateView 一个轻量级的控件, 继承自 `View`, 吸收了 `ViewStub` 的�
 Step 1. Add the JitPack repository to your build file
 Add it in your root settings.gradle at the end of repositories:
 ```groovy
-	dependencyResolutionManagement {
+dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
