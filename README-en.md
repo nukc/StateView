@@ -14,23 +14,47 @@ StateView is an invisible, zero-sized View that can be used to lazily inflate lo
 
 > JitPack
 
+#### Groovy:
 Step 1. Add the JitPack repository to your build file
+Add it in your root settings.gradle at the end of repositories:
 ```groovy
-    allprojects {
-        repositories {
-            ...
-            maven { url 'https://jitpack.io' }
-        }
+	dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
+}
 ```
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    implementation 'com.github.nukc:StateView:v3.0.2'
+	    implementation 'com.github.nukc:StateView:v3.0.3'
 	}
 ```
 
-> JCenter: will no available after 2022-02-01
+#### Kotlin:
+Step 1. Add the JitPack repository to your build file
+Add it in your settings.gradle.kts at the end of repositories:
+```kotlin
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
+```
+Step 2. Add the dependency
+```kotlin
+	dependencies {
+	        implementation("com.github.nukc:StateView:v3.0.3")
+	}
+```
+
+<details>
+<summary> JCenter: will no available after 2022-02-01</summary>
+
 ```groovy
    // andoridx, kotlin version, recommend
    implementation 'com.github.nukc.stateview:kotlin:2.2.0'
@@ -41,6 +65,8 @@ Step 2. Add the dependency
    // animator providers
    compile 'com.github.nukc.stateview:animations:1.0.2'
 ```
+
+</details>
 
 ##Usage
 
@@ -147,8 +173,7 @@ set:
 animation can custom, can also compile ```animations```
 
 ```groovy
-    compile 'com.github.nukc.stateview:animations:1.0.1'
-
+    compile 'com.github.nukc.stateview:animations:1.0.2'
 ```
 
 ```animations``` library has:

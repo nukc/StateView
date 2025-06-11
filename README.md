@@ -13,24 +13,47 @@ StateView 一个轻量级的控件, 继承自 `View`, 吸收了 `ViewStub` 的�
 
 > JitPack
 
+#### Groovy:
 Step 1. Add the JitPack repository to your build file
+Add it in your root settings.gradle at the end of repositories:
 ```groovy
-    allprojects {
-        repositories {
-            ...
-            maven { url 'https://jitpack.io' }
-        }
+	dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
+}
 ```
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    implementation 'com.github.nukc:StateView:v3.0.2'
+	    implementation 'com.github.nukc:StateView:v3.0.3'
 	}
 ```
 
+#### Kotlin:
+Step 1. Add the JitPack repository to your build file
+Add it in your settings.gradle.kts at the end of repositories:
+```kotlin
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
+```
+Step 2. Add the dependency
+```kotlin
+	dependencies {
+	        implementation("com.github.nukc:StateView:v3.0.3")
+	}
+```
 
-> JCenter: will no available after 2022-02-01
+<details>
+<summary> JCenter: will no available after 2022-02-01</summary>
+
 ```groovy
    // andoridx, kotlin version, recommend
    implementation 'com.github.nukc.stateview:kotlin:2.2.0'
@@ -41,6 +64,8 @@ Step 2. Add the dependency
    // animator providers
    compile 'com.github.nukc.stateview:animations:1.0.2'
 ```
+
+</details>
 
 ## 使用方法
 
@@ -167,8 +192,7 @@ Step 2. Add the dependency
 动画效果可以自定义，也可以直接使用 animations 这个库，与主库分离，这样不需要的就可以只依赖 library。
 
 ```groovy
-    compile 'com.github.nukc.stateview:animations:1.0.1'
-
+    compile 'com.github.nukc.stateview:animations:1.0.2'
 ```
 
 目前提供了如下几个动画效果:
