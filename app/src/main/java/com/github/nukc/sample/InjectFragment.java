@@ -31,19 +31,15 @@ public class InjectFragment extends Fragment {
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.show_empty:
-                        mStateView.showEmpty();
-                        break;
-                    case R.id.show_retry:
-                        mStateView.showRetry();
-                        break;
-                    case R.id.show_loading:
-                        mStateView.showLoading();
-                        break;
-                    case R.id.show_content:
-                        mStateView.showContent();
-                        break;
+                int itemId = item.getItemId();
+                if (itemId == R.id.show_empty) {
+                    mStateView.showEmpty();
+                } else if (itemId == R.id.show_retry) {
+                    mStateView.showRetry();
+                } else if (itemId == R.id.show_loading) {
+                    mStateView.showLoading();
+                } else if (itemId == R.id.show_content) {
+                    mStateView.showContent();
                 }
                 return false;
             }

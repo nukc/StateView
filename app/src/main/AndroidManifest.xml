@@ -12,7 +12,8 @@
         <activity android:name=".ViewPager2Activity" />
         <activity android:name=".CoordinatorLayoutActivity" />
         <activity android:name=".RelativeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +38,7 @@
         <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".SetViewActivity" />
         <activity android:name=".SwipeRefreshRecyclerActivity" />
+        <activity android:name=".WrapLinearLayoutChildActivity" />
      </application>
 
 </manifest>

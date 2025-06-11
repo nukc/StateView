@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.github.nukc.stateview.StateView
-import kotlinx.android.synthetic.main.activity_scroll_view.*
 
 class ScrollViewActivity : AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class ScrollViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scroll_view)
 
-        stateView = StateView.inject(scroll_view)
+        stateView = StateView.inject(findViewById<ScrollView>(R.id.scroll_view))
         stateView.onRetryClickListener = object : StateView.OnRetryClickListener {
             override fun onRetryClick() {
 

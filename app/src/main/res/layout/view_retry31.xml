@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- if not has parent, maybe need to set textColor -->
+<?xml version="1.0" encoding="utf-8"?><!-- if not has parent, maybe need to set textColor -->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@android:color/white"
     android:gravity="center"
-    android:textColor="@android:color/black"
-    android:text="@string/text_retry_31" />
+    android:text="@string/text_retry_31"
+    android:textColor="@android:color/black" />

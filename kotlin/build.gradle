@@ -1,16 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    namespace = "com.github.nukc.stateview"
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 30
-        versionCode 9
-        versionName "3.0.2"
+        targetSdkVersion 35
+        versionCode 10
+        versionName "3.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -22,6 +22,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 dependencies {
@@ -36,8 +45,20 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-apply from: '../bintray.gradle'
-
 tasks.withType(Javadoc).all {
     enabled = false
+}
+
+// Maven 发布配置
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.nukc' // 替换为您的 GitHub 用户名
+                artifactId = 'stateview' // 模块名称，通常与模块目录名一致
+                version = '3.0.3' // 初始版本号
+            }
+        }
+    }
 }

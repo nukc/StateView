@@ -81,10 +81,10 @@ class StateView @JvmOverloads constructor(
     }
 
     @SuppressLint("MissingSuperCall")
-    override fun draw(canvas: Canvas?) {
+    override fun draw(canvas: Canvas) {
     }
 
-    override fun dispatchDraw(canvas: Canvas?) {}
+    override fun dispatchDraw(canvas: Canvas) {}
 
     override fun setVisibility(visibility: Int) {
         for (i in 0 until views.size()) {
@@ -327,9 +327,10 @@ class StateView @JvmOverloads constructor(
                 }
 
                 // will increase the layout level
+                val index = parent.indexOfChild(view)
                 parent.removeView(view)
                 val wrap = FrameLayout(view.context)
-                parent.addView(wrap, view.layoutParams)
+                parent.addView(wrap, index, view.layoutParams)
                 wrap.addView(
                     view,
                     ViewGroup.LayoutParams.MATCH_PARENT,

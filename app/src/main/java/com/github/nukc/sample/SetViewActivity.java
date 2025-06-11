@@ -55,22 +55,17 @@ public class SetViewActivity extends AppCompatActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-			case R.id.show_empty:
-				mStateView.showEmpty();
-				break;
-			case R.id.show_retry:
-				mStateView.showRetry();
-				break;
-			case R.id.show_loading:
-				mStateView.showLoading();
-				break;
-			case R.id.show_content:
-				mStateView.showContent();
-				break;
-			case R.id.show_custom:
-				mStateView.show(1);
-				break;
+		int itemId = item.getItemId();
+		if (itemId == R.id.show_empty) {
+			mStateView.showEmpty();
+		} else if (itemId == R.id.show_retry) {
+			mStateView.showRetry();
+		} else if (itemId == R.id.show_loading) {
+			mStateView.showLoading();
+		} else if (itemId == R.id.show_content) {
+			mStateView.showContent();
+		} else if (itemId == R.id.show_custom) {
+			mStateView.show(1);
 		}
 		return super.onOptionsItemSelected(item);
 	}

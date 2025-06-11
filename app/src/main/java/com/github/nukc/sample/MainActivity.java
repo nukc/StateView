@@ -128,5 +128,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_swipe_recycler).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, SwipeRefreshRecyclerActivity.class));
         });
+
+        findViewById(R.id.btn_wrap_linearlayout_child).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, WrapLinearLayoutChildActivity.class));
+        });
     }
 }

@@ -40,16 +40,15 @@ public class DefaultActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnInEmpty:
-                mStateView.showEmpty();
-                break;
-            case R.id.btnInRetry:
-                mStateView.showRetry();
-                break;
-            case R.id.btnRemove:
-                mStateView.showContent();
-                break;
+        int itemId = v.getId();
+        if (itemId == R.id.show_empty) {
+            mStateView.showEmpty();
+        } else if (itemId == R.id.show_retry) {
+            mStateView.showRetry();
+        } else if (itemId == R.id.show_loading) {
+            mStateView.showLoading();
+        } else if (itemId == R.id.show_content) {
+            mStateView.showContent();
         }
     }
 }

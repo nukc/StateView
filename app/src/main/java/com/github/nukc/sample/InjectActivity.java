@@ -40,19 +40,15 @@ public class InjectActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.show_empty:
-                mStateView.showEmpty();
-                break;
-            case R.id.show_retry:
-                mStateView.showRetry();
-                break;
-            case R.id.show_loading:
-                mStateView.showLoading();
-                break;
-            case R.id.show_content:
-                mStateView.showContent();
-                break;
+        int itemId = item.getItemId();
+        if (itemId == R.id.show_empty) {
+            mStateView.showEmpty();
+        } else if (itemId == R.id.show_retry) {
+            mStateView.showRetry();
+        } else if (itemId == R.id.show_loading) {
+            mStateView.showLoading();
+        } else if (itemId == R.id.show_content) {
+            mStateView.showContent();
         }
         return super.onOptionsItemSelected(item);
     }

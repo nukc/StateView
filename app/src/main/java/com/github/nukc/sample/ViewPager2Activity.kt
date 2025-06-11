@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_view_pager2.*
 import kotlin.math.abs
 
 class ViewPager2Activity : AppCompatActivity() {
@@ -29,9 +28,11 @@ class ViewPager2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager2)
 
-        view_pager.setPageTransformer(animator)
-        view_pager.adapter = PagerAdapter(this)
-        TabLayoutMediator(tab_layout, view_pager) { tab, position ->
+        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
+
+        viewPager.setPageTransformer(animator)
+        viewPager.adapter = PagerAdapter(this)
+        TabLayoutMediator(findViewById(R.id.tab_layout), viewPager) { tab, position ->
             tab.text = "$position"
         }.attach()
     }

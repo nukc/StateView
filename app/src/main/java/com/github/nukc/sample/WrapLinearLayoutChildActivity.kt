@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.View
 import com.github.nukc.stateview.animations.SlideAnimatorProvider
 
-class RelativeActivity : BaseActivity() {
+class WrapLinearLayoutChildActivity : BaseActivity() {
     override fun injectTarget(): View {
-        return findViewById(R.id.btn)
+        return findViewById(R.id.tv_content)
     }
 
     override fun setContentView(): Int {
-        return R.layout.activity_relative
+        return R.layout.activity_wrap_linearlayout_child
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    namespace = "com.github.nukc.stateview"
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 25
-        versionName "1.5.4"
+        targetSdkVersion 35
     }
     buildTypes {
         release {
@@ -18,6 +16,11 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 }
 

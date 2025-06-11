@@ -116,5 +116,11 @@
             android:layout_height="wrap_content"
             android:text="SwipeRefreshLayout + RecyclerView" />
 
+        <Button
+            android:id="@+id/btn_wrap_linearlayout_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wrap LinearLayout's Child" />
+
     </LinearLayout>
 </ScrollView>
