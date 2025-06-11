@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
 
 android {
     namespace = "com.github.nukc.stateview.animations"
@@ -7,6 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 35
+        versionCode 3
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -25,6 +29,10 @@ android {
 
 }
 
+kotlin {
+    jvmToolchain(21)
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
@@ -35,4 +43,15 @@ dependencies {
     api project(':kotlin')
 }
 
-//apply from: './bintray.gradle'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.nukc.stateview'
+                artifactId = 'animations'
+                version = '1.0.2'
+            }
+        }
+    }
+}
