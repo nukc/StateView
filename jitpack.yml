@@ -1,5 +1,2 @@
 jdk:
   - openjdk21
-
-install:
-  - ./gradlew :animations:publishToMavenLocal
