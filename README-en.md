@@ -18,7 +18,7 @@ StateView is an invisible, zero-sized View that can be used to lazily inflate lo
 Step 1. Add the JitPack repository to your build file
 Add it in your root settings.gradle at the end of repositories:
 ```groovy
-	dependencyResolutionManagement {
+dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
