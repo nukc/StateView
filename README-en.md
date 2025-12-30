@@ -29,7 +29,7 @@ dependencyResolutionManagement {
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    implementation 'com.github.nukc:StateView:v3.0.3'
+	    implementation 'com.github.nukc:StateView:v3.0.5'
 	}
 ```
 
@@ -48,7 +48,7 @@ Add it in your settings.gradle.kts at the end of repositories:
 Step 2. Add the dependency
 ```kotlin
 	dependencies {
-	        implementation("com.github.nukc:StateView:v3.0.3")
+	        implementation("com.github.nukc:StateView:v3.0.5")
 	}
 ```
 
