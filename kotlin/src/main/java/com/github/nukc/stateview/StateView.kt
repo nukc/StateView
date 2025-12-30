@@ -231,6 +231,8 @@ class StateView @JvmOverloads constructor(
                 lp.rightToRight = source.rightToRight
                 lp.topToTop = source.topToTop
                 lp.bottomToBottom = source.bottomToBottom
+                lp.verticalBias = source.verticalBias
+                lp.horizontalBias = source.horizontalBias
                 viewParent.addView(view, index, lp)
             } else {
                 viewParent.addView(view, index, layoutParams)

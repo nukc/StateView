@@ -21,6 +21,7 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_constraint_layout);
 
         mStateView = StateView.inject((TextView)findViewById(R.id.text));
+//        mStateView = findViewById(R.id.state_view);
         mStateView.setAnimatorProvider(new SlideAnimatorProvider());
         mStateView.setEmptyResource(R.layout.view_empty);
         mStateView.setRetryResource(R.layout.view_retry);
