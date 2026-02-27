@@ -48,7 +48,7 @@ Add it in your settings.gradle.kts at the end of repositories:
 Step 2. Add the dependency
 ```kotlin
 	dependencies {
-	        implementation("com.github.nukc:StateView:v3.0.5")
+	        implementation("com.github.nukc:StateView:v3.0.6")
 	}
 ```
 
