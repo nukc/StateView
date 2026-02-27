@@ -47,7 +47,7 @@ Add it in your settings.gradle.kts at the end of repositories:
 Step 2. Add the dependency
 ```kotlin
 	dependencies {
-	        implementation("com.github.nukc:StateView:v3.0.5")
+	        implementation("com.github.nukc:StateView:v3.0.6")
 	}
 ```
 
@@ -141,6 +141,11 @@ Step 2. Add the dependency
     setView(1, view)
     // show view
     show(viewType: Int)
+
+    // v3.0.6
+    setEmpty(view: View)
+    setRetry(view: View)
+    setLoading(view: View)
 ```
 
 利用 ```OnInflateListener``` 设置文本图像或者其它操作：

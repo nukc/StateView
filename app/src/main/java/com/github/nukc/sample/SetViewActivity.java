@@ -38,7 +38,8 @@ public class SetViewActivity extends AppCompatActivity {
 		if (tvMessage != null) {
 			tvMessage.setText("Run setEmptyView");
 		}
-		mStateView.setView(mStateView.getEmptyResource(), emptyView);
+//		mStateView.setView(mStateView.getEmptyResource(), emptyView);
+		mStateView.setEmpty(emptyView);
 
 		mStateView.setRetryResource(R.layout.view_retry31);
 

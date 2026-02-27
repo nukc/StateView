@@ -29,7 +29,7 @@ dependencyResolutionManagement {
 Step 2. Add the dependency
 ```groovy
 	dependencies {
-	    implementation 'com.github.nukc:StateView:v3.0.5'
+	    implementation 'com.github.nukc:StateView:v3.0.6'
 	}
 ```
 
@@ -142,6 +142,11 @@ setView(mStateView.getEmptyResource(), emptyView)
 setView(1, view)
 // show view
 show(viewType: Int)
+
+// v3.0.6
+setEmpty(view: View)
+setRetry(view: View)
+setLoading(view: View)
 ```
 
 use setOnInflateListener to set message, like AnimatorActivity.java#L28

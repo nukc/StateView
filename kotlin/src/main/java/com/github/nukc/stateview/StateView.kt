@@ -106,6 +106,18 @@ class StateView @JvmOverloads constructor(
         views.put(viewType, view)
     }
 
+    fun setEmpty(view: View) {
+        setView(emptyResource, view)
+    }
+
+    fun setRetry(view: View) {
+        setView(retryResource, view)
+    }
+
+    fun setLoading(view: View) {
+        setView(loadingResource, view)
+    }
+
     fun showContent() {
         visibility = GONE
     }
